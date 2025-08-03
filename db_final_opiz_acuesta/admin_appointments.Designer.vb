@@ -105,7 +105,7 @@ Partial Class admin_appointments
         Me.S_aID.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.S_aID.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.S_aID.ForeColor = System.Drawing.Color.Transparent
-        Me.S_aID.Location = New System.Drawing.Point(441, 328)
+        Me.S_aID.Location = New System.Drawing.Point(441, 329)
         Me.S_aID.Name = "S_aID"
         Me.S_aID.Size = New System.Drawing.Size(133, 35)
         Me.S_aID.TabIndex = 33
@@ -156,7 +156,7 @@ Partial Class admin_appointments
         Me.upd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.upd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.upd.ForeColor = System.Drawing.Color.Transparent
-        Me.upd.Location = New System.Drawing.Point(595, 374)
+        Me.upd.Location = New System.Drawing.Point(595, 376)
         Me.upd.Name = "upd"
         Me.upd.Size = New System.Drawing.Size(133, 35)
         Me.upd.TabIndex = 36

@@ -167,6 +167,18 @@
     <Compile Include="admin_treatments.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="dentist_appointments.Designer.vb">
+      <DependentUpon>dentist_appointments.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dentist_appointments.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dentist_transactions.Designer.vb">
+      <DependentUpon>dentist_transactions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dentist_transactions.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="admin_users.Designer.vb">
       <DependentUpon>admin_users.vb</DependentUpon>
     </Compile>
@@ -186,10 +198,16 @@
     <Compile Include="appointment_2.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="doctor_treatments.Designer.vb">
-      <DependentUpon>doctor_treatments.vb</DependentUpon>
+    <Compile Include="dentist_inventory.Designer.vb">
+      <DependentUpon>dentist_inventory.vb</DependentUpon>
     </Compile>
-    <Compile Include="doctor_treatments.vb">
+    <Compile Include="dentist_inventory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dentist_menu.Designer.vb">
+      <DependentUpon>dentist_menu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dentist_menu.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="login.Designer.vb">
@@ -220,6 +238,12 @@
     <Compile Include="Payment.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="receipt.Designer.vb">
+      <DependentUpon>receipt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="receipt.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Services.Designer.vb">
       <DependentUpon>Services.vb</DependentUpon>
     </Compile>
@@ -244,6 +268,12 @@
     <Compile Include="admin_inventory.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="staff_inventory.Designer.vb">
+      <DependentUpon>staff_inventory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="staff_inventory.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="staff_menu.Designer.vb">
       <DependentUpon>staff_menu.vb</DependentUpon>
     </Compile>
@@ -260,6 +290,12 @@
       <DependentUpon>thank_you.vb</DependentUpon>
     </Compile>
     <Compile Include="thank_you.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="user_interface.Designer.vb">
+      <DependentUpon>user_interface.vb</DependentUpon>
+    </Compile>
+    <Compile Include="user_interface.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="user_patient.Designer.vb">
@@ -291,6 +327,12 @@
     <EmbeddedResource Include="admin_treatments.resx">
       <DependentUpon>admin_treatments.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="dentist_appointments.resx">
+      <DependentUpon>dentist_appointments.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dentist_transactions.resx">
+      <DependentUpon>dentist_transactions.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="admin_users.resx">
       <DependentUpon>admin_users.vb</DependentUpon>
     </EmbeddedResource>
@@ -300,8 +342,11 @@
     <EmbeddedResource Include="appointment_2.resx">
       <DependentUpon>appointment_2.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="doctor_treatments.resx">
-      <DependentUpon>doctor_treatments.vb</DependentUpon>
+    <EmbeddedResource Include="dentist_inventory.resx">
+      <DependentUpon>dentist_inventory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dentist_menu.resx">
+      <DependentUpon>dentist_menu.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.vb</DependentUpon>
@@ -315,6 +360,9 @@
     <EmbeddedResource Include="Payment.resx">
       <DependentUpon>Payment.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="receipt.resx">
+      <DependentUpon>receipt.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Services.resx">
       <DependentUpon>Services.vb</DependentUpon>
     </EmbeddedResource>
@@ -327,6 +375,9 @@
     <EmbeddedResource Include="admin_inventory.resx">
       <DependentUpon>admin_inventory.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="staff_inventory.resx">
+      <DependentUpon>staff_inventory.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="staff_menu.resx">
       <DependentUpon>staff_menu.vb</DependentUpon>
     </EmbeddedResource>
@@ -335,6 +386,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="thank_you.resx">
       <DependentUpon>thank_you.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user_interface.resx">
+      <DependentUpon>user_interface.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="user_patient.resx">
       <DependentUpon>user_patient.vb</DependentUpon>
@@ -430,6 +484,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ADMIN_TRANSACTION.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\STAFF_INVENTORY.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DENTIST_INVENTORY.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DENTIST_TRANSACTIONS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\USER_INTERFACE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guest_icon.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

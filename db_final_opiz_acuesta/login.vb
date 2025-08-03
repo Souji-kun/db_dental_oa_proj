@@ -24,33 +24,49 @@ Public Class login
         Try
             conn.Open()
 
+            ' Step 1: Validate user and get user_id
             sql = "SELECT user_id FROM users WHERE username = '" & uname & "' AND password = '" & pwd & "'"
             dbcomm = New MySqlCommand(sql, conn)
             dbread = dbcomm.ExecuteReader()
 
             If dbread.Read() Then
                 currentUserID = Convert.ToInt32(dbread("user_id"))
-                MsgBox("User login successful")
+                dbread.Close()
 
-                conn.Close()
-                conn.Open()
-
-                ' Check if user has matching patient entry
+                ' Step 2: Check if matching patient record exists
                 sql = "SELECT * FROM patients WHERE users_user_id = " & currentUserID
                 dbcomm = New MySqlCommand(sql, conn)
                 dbread = dbcomm.ExecuteReader()
 
+                Dim statusValue As String
+                Dim patientData As Dictionary(Of String, String) = Nothing
+
                 If dbread.Read() Then
-                    Dim patientData As New Dictionary(Of String, String) From {
-                    {"patient_id", dbread("patient_id").ToString()},
-                    {"first_name", dbread("first_name").ToString()},
-                    {"last_name", dbread("last_name").ToString()},
-                    {"middle_name", dbread("middle_name").ToString()},
-                    {"birth_date", Convert.ToDateTime(dbread("birth_date")).ToString("yyyy-MM-dd")},
-                    {"address", dbread("address").ToString()},
-                    {"contact_number", dbread("contact_number").ToString()},
-                    {"email_address", dbread("email_address").ToString()}
-                }
+                    statusValue = "logged"
+
+                    ' Store patient data
+                    patientData = New Dictionary(Of String, String) From {
+                {"patient_id", dbread("patient_id").ToString()},
+                {"first_name", dbread("first_name").ToString()},
+                {"last_name", dbread("last_name").ToString()},
+                {"middle_name", dbread("middle_name").ToString()},
+                {"birth_date", Convert.ToDateTime(dbread("birth_date")).ToString("yyyy-MM-dd")},
+                {"address", dbread("address").ToString()},
+                {"contact_number", dbread("contact_number").ToString()},
+                {"email_address", dbread("email_address").ToString()}
+            }
+                Else
+                    statusValue = "notlogged"
+                End If
+                dbread.Close()
+
+                ' Step 3: Update user status
+                sql = "UPDATE users SET status = '" & statusValue & "' WHERE user_id = " & currentUserID
+                dbcomm = New MySqlCommand(sql, conn)
+                dbcomm.ExecuteNonQuery()
+
+                ' Step 4: Load appropriate form
+                If statusValue = "logged" AndAlso patientData IsNot Nothing Then
                     Dim form As New appointment2(patientData, currentUserID)
                     form.Show()
                 Else
@@ -63,6 +79,7 @@ Public Class login
                 Me.Hide()
             Else
                 MsgBox("Invalid username or password.")
+                dbread.Close()
             End If
 
         Catch ex As Exception

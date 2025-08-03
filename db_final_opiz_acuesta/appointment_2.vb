@@ -26,9 +26,6 @@ Public Class appointment2
 
 
     Private Sub btn1_Click(sender As Object, e As EventArgs) Handles btn1.Click
-
-
-
         Dim selectedDate As String = DateTimePicker1.Value.ToString("yyyy-MM-dd")
         Dim selectedTime As String = ""
         Dim selectedTreatmentID As Integer = Convert.ToInt32(cb1.SelectedValue)
@@ -68,9 +65,10 @@ Public Class appointment2
             Dim checkCmd As New MySqlCommand(sql, conn)
             Dim existingPatientId = checkCmd.ExecuteScalar()
 
-            Dim userEmail As String = ""
-            Dim emailCmd As New MySqlCommand("SELECT email_address FROM users WHERE user_id = " & currentUserID, conn)
-            userEmail = Convert.ToString(emailCmd.ExecuteScalar())
+            Dim userEmail As String = patientInfo("email_address")
+            sql = "UPDATE users SET email_address = '" & patientInfo("email_address") & "' WHERE user_id = " & currentUserID
+            Dim updateUserCmd As New MySqlCommand(sql, conn)
+            updateUserCmd.ExecuteNonQuery()
 
             If existingPatientId IsNot Nothing Then
                 patientID = Convert.ToInt32(existingPatientId)
@@ -93,18 +91,24 @@ Public Class appointment2
                 End If
             End If
 
-            ' 3. Insert medical history with the correct patient ID
+            ' Insert into medical_history first
             sql = "INSERT INTO medical_history (patients_patient_id, md_description) VALUES (" & patientID & ", '" & medicalDesc & "')"
             Dim insertHistoryCmd As New MySqlCommand(sql, conn)
             Dim k As Integer = insertHistoryCmd.ExecuteNonQuery()
-            Dim newMdId As Integer = insertHistoryCmd.LastInsertedId
-            Console.WriteLine("Inserted md_id: " & newMdId)
 
-            MsgBox(If(k > 0, "Medical history saved.", "Failed to insert medical history."))
+            ' Now it's safe to fetch the inserted ID
+            Dim newMdId As Integer = insertHistoryCmd.LastInsertedId
+
+            ' Update patients table with the new md_id
+            sql = "UPDATE patients SET medical_history_md_id = " & newMdId & " WHERE patient_id = " & patientID
+            Dim updateCmd As New MySqlCommand(sql, conn)
+            updateCmd.ExecuteNonQuery()
+
+            MsgBox(If(k > 0, "Medical history saved and linked to patient.", "Failed to insert medical history."))
 
             ' 4. Insert appointment
-            sql = "INSERT INTO appointments(patients_patient_id, appointment_date, status, employees_employee_id) " &
-                  "VALUES (" & patientID & ", '" & fullDateTime & "', 'pending', 1)"
+            sql = "INSERT INTO appointments(patients_patient_id, appointment_date, status, employees_employee_id, treatments_treatment_id) " &
+                  "VALUES (" & patientID & ", '" & fullDateTime & "' , 'pending', 1, '" & selectedTreatmentID & "')"
             Dim insertAppCmd As New MySqlCommand(sql, conn)
             Dim j As Integer = insertAppCmd.ExecuteNonQuery()
             Dim newAppID As Integer = insertAppCmd.LastInsertedId
@@ -213,7 +217,7 @@ Public Class appointment2
 
                         If timeValue <> "" Then
                             Dim fullSlotDateTime As DateTime = DateTime.Parse(selectedDate.ToString("yyyy-MM-dd") & " " & timeValue)
-                            Dim isPastSlot As Boolean = (selectedDate = Date.Today AndAlso fullSlotDateTime < DateTime.Now)
+                            Dim isPastSlot As Boolean = (fullSlotDateTime < DateTime.Now)
 
                             sql = "SELECT COUNT(*) FROM appointments WHERE appointment_date = '" & fullSlotDateTime.ToString("yyyy-MM-dd HH:mm:ss") & "'"
                             Dim cmd As New MySqlCommand(sql, conn)
@@ -244,7 +248,4 @@ Public Class appointment2
         End Try
     End Sub
 
-    Private Sub cb1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cb1.SelectedIndexChanged
-
-    End Sub
 End Class

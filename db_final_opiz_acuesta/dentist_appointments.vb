@@ -1,18 +1,13 @@
 ﻿Imports MySql.Data.MySqlClient
 
-Public Class staff_appointments
+Public Class dentist_appointments
     Dim conn As MySqlConnection = New MySqlConnection("Server=localhost; Database=db_dental; Uid=root; Pwd=;")
     Public sql As String
     Public dbcomm As MySqlCommand
     Public dbread As MySqlDataReader
     Public dataAdapter1 As MySqlDataAdapter
     Public ds As DataSet
-    Private Sub btn2_Click(sender As Object, e As EventArgs) Handles btn2.Click
-        Me.Hide()
-        staff_menu.Show()
-    End Sub
-
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles S_aID.Click
+    Private Sub S_aID_Click(sender As Object, e As EventArgs) Handles S_aID.Click
         Dim aID As String = Val(tb1.Text)
         Dim selectedDate As String = DateTimePicker1.Value.ToString("yyyy-MM-dd")
         Try
@@ -178,5 +173,10 @@ Public Class staff_appointments
         tb4.Clear()
         DataGridView1.DataSource = Nothing
         DataGridView1.Rows.Clear()
+    End Sub
+
+    Private Sub btn2_Click(sender As Object, e As EventArgs) Handles btn2.Click
+        Me.Hide()
+        dentist_menu.Show()
     End Sub
 End Class

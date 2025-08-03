@@ -31,18 +31,20 @@ Partial Class login
         'tb1
         '
         Me.tb1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tb1.Location = New System.Drawing.Point(518, 204)
+        Me.tb1.Location = New System.Drawing.Point(691, 251)
+        Me.tb1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.tb1.Name = "tb1"
-        Me.tb1.Size = New System.Drawing.Size(242, 31)
+        Me.tb1.Size = New System.Drawing.Size(321, 37)
         Me.tb1.TabIndex = 49
         '
         'tb2
         '
         Me.tb2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tb2.Location = New System.Drawing.Point(518, 287)
+        Me.tb2.Location = New System.Drawing.Point(691, 353)
+        Me.tb2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.tb2.Name = "tb2"
         Me.tb2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.tb2.Size = New System.Drawing.Size(242, 31)
+        Me.tb2.Size = New System.Drawing.Size(321, 37)
         Me.tb2.TabIndex = 50
         '
         'btn_login
@@ -54,9 +56,10 @@ Partial Class login
         Me.btn_login.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.btn_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_login.ForeColor = System.Drawing.Color.Transparent
-        Me.btn_login.Location = New System.Drawing.Point(496, 346)
+        Me.btn_login.Location = New System.Drawing.Point(661, 426)
+        Me.btn_login.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btn_login.Name = "btn_login"
-        Me.btn_login.Size = New System.Drawing.Size(133, 35)
+        Me.btn_login.Size = New System.Drawing.Size(177, 43)
         Me.btn_login.TabIndex = 51
         Me.btn_login.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.btn_login.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
@@ -71,9 +74,10 @@ Partial Class login
         Me.btn_signup.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.btn_signup.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_signup.ForeColor = System.Drawing.Color.Transparent
-        Me.btn_signup.Location = New System.Drawing.Point(677, 346)
+        Me.btn_signup.Location = New System.Drawing.Point(903, 426)
+        Me.btn_signup.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btn_signup.Name = "btn_signup"
-        Me.btn_signup.Size = New System.Drawing.Size(133, 35)
+        Me.btn_signup.Size = New System.Drawing.Size(177, 43)
         Me.btn_signup.TabIndex = 52
         Me.btn_signup.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.btn_signup.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
@@ -81,14 +85,16 @@ Partial Class login
         '
         'login
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.db_final_opiz_acuesta.My.Resources.Resources._21
-        Me.ClientSize = New System.Drawing.Size(817, 489)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ClientSize = New System.Drawing.Size(1089, 602)
         Me.Controls.Add(Me.btn_signup)
         Me.Controls.Add(Me.btn_login)
         Me.Controls.Add(Me.tb2)
         Me.Controls.Add(Me.tb1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "login"
         Me.Text = "login"
         Me.ResumeLayout(False)

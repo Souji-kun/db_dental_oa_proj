@@ -74,11 +74,13 @@ Public Class Payment
                     ' DB insert only if payment is valid
                     Try
                         conn.Open()
-                        sql = "INSERT INTO transactions(patient_id, name, appointment_date, treatment_id, treatment_name, price, amount_paid, amount_tendered, appointment_id)" &
-                      "VALUES('" & storedPatientID & "' , '" & storedPatientName & "' , '" & storedAppointmentDate & "' , '" & storedTreatmentID & "' ,'" & storedTreatmentName & "' , '" & storedTreatmentPrice & "' , '" & paymentAmount & "' , '" & amountTendered & "' , '" & storedAppointmentID & "')"
+                        sql = "INSERT INTO transactions(patient_id, name, appointment_date, treatment_id, treatment_name, price, amount_paid, amount_tendered, appointment_id, status)" &
+                      "VALUES('" & storedPatientID & "' , '" & storedPatientName & "' , '" & storedAppointmentDate & "' , '" & storedTreatmentID & "' ,'" & storedTreatmentName & "' , '" & storedTreatmentPrice & "' , '" & paymentAmount & "' , '" & amountTendered & "' , '" & storedAppointmentID & "', 'processing')"
 
                         Dim dbcomm As New MySqlCommand(sql, conn)
                         Dim i As Integer = dbcomm.ExecuteNonQuery()
+                        Dim receiptForm As New receipt(storedTreatmentName, storedTreatmentPrice, paymentAmount, amountTendered)
+                        receiptForm.Show()
 
                         If i > 0 Then
                             MsgBox("Thank You for Choosing our service, you may now check your appointment in your profile page!!")

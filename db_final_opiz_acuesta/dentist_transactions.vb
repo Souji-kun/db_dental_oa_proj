@@ -1,26 +1,12 @@
 ﻿Imports MySql.Data.MySqlClient
-
-Public Class staff_transactions
+Public Class dentist_transactions
     Dim conn As MySqlConnection = New MySqlConnection("Server=localhost; Database=db_dental; Uid=root; Pwd=;")
     Public sql As String
     Public dbcomm As MySqlCommand
     Public dbread As MySqlDataReader
     Public dataAdapter1 As MySqlDataAdapter
     Public ds As DataSet
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        tb1.Clear()
-        tb2.Clear()
-        tb3.Clear()
-        tb4.Clear()
-        tb5.Clear()
-        tb6.Clear()
-        tb7.Clear()
-        tb8.Value = Date.Today
-        DataGridView1.DataSource = Nothing
-        DataGridView1.Rows.Clear()
-    End Sub
-
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles s_tID.Click
+    Private Sub S_tID_Click(sender As Object, e As EventArgs) Handles S_tID.Click
         Dim tID = tb1.Text
 
         Try
@@ -61,11 +47,12 @@ Public Class staff_transactions
         End Try
     End Sub
 
-    Private Sub staff_transactions_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+    Private Sub btn2_Click(sender As Object, e As EventArgs) Handles btn2.Click
+        Me.Hide()
+        dentist_menu.Show()
     End Sub
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+    Private Sub ins_Click(sender As Object, e As EventArgs) Handles ins.Click
         Dim tID As String = tb1.Text
         Dim pID As String = tb2.Text
         Dim aID As String = tb3.Text
@@ -142,7 +129,7 @@ Public Class staff_transactions
 
     End Sub
 
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+    Private Sub S_pID_Click(sender As Object, e As EventArgs) Handles S_pID.Click
         Dim pID = tb2.Text
 
         Try
@@ -183,13 +170,49 @@ Public Class staff_transactions
         End Try
     End Sub
 
-    Private Sub btn2_Click(sender As Object, e As EventArgs)
-        Me.Hide()
-        staff_menu.Show()
+    Private Sub upd_Click(sender As Object, e As EventArgs) Handles upd.Click
+        Dim tID = tb1.Text
+        Dim updateFields As New List(Of String)
+        Dim amountTendered = Val(tb7.Text) - Val(tb6.Text)
+
+        If Not String.IsNullOrWhiteSpace(tb2.Text) Then updateFields.Add("patient_id = '" & tb2.Text & "'")
+        If Not String.IsNullOrWhiteSpace(tb3.Text) Then updateFields.Add("appointment_id = '" & tb3.Text & "'")
+        If Not String.IsNullOrWhiteSpace(tb4.Text) Then updateFields.Add("treatment_id = '" & tb4.Text & "'")
+        If Not String.IsNullOrWhiteSpace(tb5.Text) Then updateFields.Add("treatment_name = '" & tb5.Text & "'")
+        If Not String.IsNullOrWhiteSpace(tb6.Text) Then updateFields.Add("price = '" & tb6.Text & "'")
+        If Not String.IsNullOrWhiteSpace(tb7.Text) Then updateFields.Add("amount_paid = '" & tb7.Text & "'")
+
+        If updateFields.Count > 0 Then
+            Try
+                Dim sql As String = "UPDATE transactions SET " &
+                                    String.Join(", ", updateFields) &
+                                    ", amount_tendered = '" & amountTendered.ToString() & "' " &
+                                    "WHERE transaction_id = '" & tID & "'"
+
+                Dim cmd As New MySqlCommand(sql, conn)
+                conn.Open()
+                Dim rowsAffected As Integer = cmd.ExecuteNonQuery()
+                MsgBox(If(rowsAffected > 0, "Transaction info updated.", "No record was updated."))
+            Catch ex As Exception
+                MsgBox("Error: " & ex.Message)
+            Finally
+                conn.Close()
+            End Try
+        Else
+            MsgBox("No fields to update. Please fill in at least one value.")
+        End If
     End Sub
 
-    Private Sub btn2_Click_1(sender As Object, e As EventArgs) Handles btn2.Click
-        Me.Hide()
-        staff_menu.Show()
+    Private Sub del_Click(sender As Object, e As EventArgs) Handles del.Click
+        tb1.Clear()
+        tb2.Clear()
+        tb3.Clear()
+        tb4.Clear()
+        tb5.Clear()
+        tb6.Clear()
+        tb7.Clear()
+        tb8.Value = Date.Today
+        DataGridView1.DataSource = Nothing
+        DataGridView1.Rows.Clear()
     End Sub
 End Class

@@ -24,6 +24,8 @@ Partial Class About_Us
     Private Sub InitializeComponent()
         Me.btn1 = New System.Windows.Forms.Button()
         Me.btn2 = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btn1
@@ -60,6 +62,17 @@ Partial Class About_Us
         Me.btn2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.btn2.UseVisualStyleBackColor = False
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.PictureBox1.BackgroundImage = Global.db_final_opiz_acuesta.My.Resources.Resources.guest_icon
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Location = New System.Drawing.Point(5, 18)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(58, 50)
+        Me.PictureBox1.TabIndex = 11
+        Me.PictureBox1.TabStop = False
+        '
         'About_Us
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -67,14 +80,17 @@ Partial Class About_Us
         Me.BackgroundImage = Global.db_final_opiz_acuesta.My.Resources.Resources.Tooth_Extraction
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(815, 488)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btn2)
         Me.Controls.Add(Me.btn1)
         Me.Name = "About_Us"
         Me.Text = "About_Us"
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents btn1 As Button
     Friend WithEvents btn2 As Button
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

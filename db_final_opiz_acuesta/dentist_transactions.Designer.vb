@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class staff_transactions
+Partial Class dentist_transactions
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,12 +22,6 @@ Partial Class staff_transactions
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.s_tID = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.btn2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.gb1 = New System.Windows.Forms.GroupBox()
         Me.rb_4to5 = New System.Windows.Forms.RadioButton()
         Me.rb_3to4 = New System.Windows.Forms.RadioButton()
@@ -54,105 +48,18 @@ Partial Class staff_transactions
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.tb1 = New System.Windows.Forms.TextBox()
-        Me.Button2 = New System.Windows.Forms.Button()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.btn2 = New System.Windows.Forms.Button()
+        Me.del = New System.Windows.Forms.Button()
+        Me.upd = New System.Windows.Forms.Button()
+        Me.S_pID = New System.Windows.Forms.Button()
+        Me.ins = New System.Windows.Forms.Button()
+        Me.S_tID = New System.Windows.Forms.Button()
         Me.gb1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        's_tID
-        '
-        Me.s_tID.BackColor = System.Drawing.Color.Transparent
-        Me.s_tID.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.s_tID.FlatAppearance.BorderSize = 0
-        Me.s_tID.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.s_tID.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.s_tID.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.s_tID.ForeColor = System.Drawing.Color.Transparent
-        Me.s_tID.Location = New System.Drawing.Point(445, 374)
-        Me.s_tID.Name = "s_tID"
-        Me.s_tID.Size = New System.Drawing.Size(128, 31)
-        Me.s_tID.TabIndex = 18
-        Me.s_tID.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.s_tID.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.s_tID.UseVisualStyleBackColor = False
-        '
-        'Button4
-        '
-        Me.Button4.BackColor = System.Drawing.Color.Transparent
-        Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button4.FlatAppearance.BorderSize = 0
-        Me.Button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.Button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.ForeColor = System.Drawing.Color.Transparent
-        Me.Button4.Location = New System.Drawing.Point(445, 421)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(128, 31)
-        Me.Button4.TabIndex = 19
-        Me.Button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.Button4.UseVisualStyleBackColor = False
-        '
-        'Button5
-        '
-        Me.Button5.BackColor = System.Drawing.Color.Transparent
-        Me.Button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button5.FlatAppearance.BorderSize = 0
-        Me.Button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.Button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button5.ForeColor = System.Drawing.Color.Transparent
-        Me.Button5.Location = New System.Drawing.Point(601, 373)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(128, 31)
-        Me.Button5.TabIndex = 20
-        Me.Button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.Button5.UseVisualStyleBackColor = False
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(352, 88)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(450, 220)
-        Me.DataGridView1.TabIndex = 45
-        '
-        'btn2
-        '
-        Me.btn2.BackColor = System.Drawing.Color.Transparent
-        Me.btn2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.btn2.FlatAppearance.BorderSize = 0
-        Me.btn2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btn2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btn2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btn2.ForeColor = System.Drawing.Color.Transparent
-        Me.btn2.Location = New System.Drawing.Point(724, 27)
-        Me.btn2.Name = "btn2"
-        Me.btn2.Size = New System.Drawing.Size(47, 48)
-        Me.btn2.TabIndex = 46
-        Me.btn2.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btn2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.btn2.UseVisualStyleBackColor = False
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.Transparent
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.ForeColor = System.Drawing.Color.Transparent
-        Me.Button1.Location = New System.Drawing.Point(600, 423)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(128, 31)
-        Me.Button1.TabIndex = 47
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.Button1.UseVisualStyleBackColor = False
         '
         'gb1
         '
@@ -166,10 +73,10 @@ Partial Class staff_transactions
         Me.gb1.Controls.Add(Me.rb_10to11)
         Me.gb1.Controls.Add(Me.rb_9to10)
         Me.gb1.Controls.Add(Me.rb_8to9)
-        Me.gb1.Location = New System.Drawing.Point(77, 355)
+        Me.gb1.Location = New System.Drawing.Point(81, 371)
         Me.gb1.Name = "gb1"
         Me.gb1.Size = New System.Drawing.Size(352, 115)
-        Me.gb1.TabIndex = 93
+        Me.gb1.TabIndex = 99
         Me.gb1.TabStop = False
         '
         'rb_4to5
@@ -283,10 +190,10 @@ Partial Class staff_transactions
         'tb8
         '
         Me.tb8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tb8.Location = New System.Drawing.Point(187, 311)
+        Me.tb8.Location = New System.Drawing.Point(191, 327)
         Me.tb8.Name = "tb8"
         Me.tb8.Size = New System.Drawing.Size(274, 26)
-        Me.tb8.TabIndex = 92
+        Me.tb8.TabIndex = 98
         '
         'Label8
         '
@@ -294,60 +201,60 @@ Partial Class staff_transactions
         Me.Label8.BackColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(252, Byte), Integer))
         Me.Label8.Font = New System.Drawing.Font("Microsoft YaHei", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(133, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(194, Byte), Integer))
-        Me.Label8.Location = New System.Drawing.Point(35, 305)
+        Me.Label8.Location = New System.Drawing.Point(39, 321)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(157, 50)
-        Me.Label8.TabIndex = 91
+        Me.Label8.TabIndex = 97
         Me.Label8.Text = "APPOINTMENT " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "DATE:"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'tb7
         '
         Me.tb7.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tb7.Location = New System.Drawing.Point(187, 276)
+        Me.tb7.Location = New System.Drawing.Point(191, 292)
         Me.tb7.Name = "tb7"
         Me.tb7.Size = New System.Drawing.Size(159, 29)
-        Me.tb7.TabIndex = 90
+        Me.tb7.TabIndex = 96
         '
         'tb6
         '
         Me.tb6.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tb6.Location = New System.Drawing.Point(187, 244)
+        Me.tb6.Location = New System.Drawing.Point(191, 260)
         Me.tb6.Name = "tb6"
         Me.tb6.Size = New System.Drawing.Size(159, 29)
-        Me.tb6.TabIndex = 89
+        Me.tb6.TabIndex = 95
         '
         'tb5
         '
         Me.tb5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tb5.Location = New System.Drawing.Point(187, 213)
+        Me.tb5.Location = New System.Drawing.Point(191, 229)
         Me.tb5.Name = "tb5"
         Me.tb5.Size = New System.Drawing.Size(159, 29)
-        Me.tb5.TabIndex = 88
+        Me.tb5.TabIndex = 94
         '
         'tb4
         '
         Me.tb4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tb4.Location = New System.Drawing.Point(187, 181)
+        Me.tb4.Location = New System.Drawing.Point(191, 197)
         Me.tb4.Name = "tb4"
         Me.tb4.Size = New System.Drawing.Size(159, 29)
-        Me.tb4.TabIndex = 87
+        Me.tb4.TabIndex = 93
         '
         'tb3
         '
         Me.tb3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tb3.Location = New System.Drawing.Point(187, 148)
+        Me.tb3.Location = New System.Drawing.Point(191, 164)
         Me.tb3.Name = "tb3"
         Me.tb3.Size = New System.Drawing.Size(159, 29)
-        Me.tb3.TabIndex = 86
+        Me.tb3.TabIndex = 92
         '
         'tb2
         '
         Me.tb2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tb2.Location = New System.Drawing.Point(187, 115)
+        Me.tb2.Location = New System.Drawing.Point(191, 131)
         Me.tb2.Name = "tb2"
         Me.tb2.Size = New System.Drawing.Size(159, 29)
-        Me.tb2.TabIndex = 85
+        Me.tb2.TabIndex = 91
         '
         'Label7
         '
@@ -355,10 +262,10 @@ Partial Class staff_transactions
         Me.Label7.BackColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(252, Byte), Integer))
         Me.Label7.Font = New System.Drawing.Font("Microsoft YaHei", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(133, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(194, Byte), Integer))
-        Me.Label7.Location = New System.Drawing.Point(113, 247)
+        Me.Label7.Location = New System.Drawing.Point(117, 263)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(77, 25)
-        Me.Label7.TabIndex = 84
+        Me.Label7.TabIndex = 90
         Me.Label7.Text = "TOTAL:"
         '
         'Label6
@@ -367,10 +274,10 @@ Partial Class staff_transactions
         Me.Label6.BackColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(252, Byte), Integer))
         Me.Label6.Font = New System.Drawing.Font("Microsoft YaHei", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(133, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(194, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(-2, 217)
+        Me.Label6.Location = New System.Drawing.Point(2, 233)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(192, 25)
-        Me.Label6.TabIndex = 83
+        Me.Label6.TabIndex = 89
         Me.Label6.Text = "TREATMENT NAME:"
         '
         'Label5
@@ -379,10 +286,10 @@ Partial Class staff_transactions
         Me.Label5.BackColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(252, Byte), Integer))
         Me.Label5.Font = New System.Drawing.Font("Microsoft YaHei", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(133, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(194, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(8, 152)
+        Me.Label5.Location = New System.Drawing.Point(12, 168)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(182, 25)
-        Me.Label5.TabIndex = 82
+        Me.Label5.TabIndex = 88
         Me.Label5.Text = "APPOINTMENT ID:"
         '
         'Label4
@@ -391,10 +298,10 @@ Partial Class staff_transactions
         Me.Label4.BackColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(252, Byte), Integer))
         Me.Label4.Font = New System.Drawing.Font("Microsoft YaHei", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(133, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(194, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(35, 185)
+        Me.Label4.Location = New System.Drawing.Point(39, 201)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(155, 25)
-        Me.Label4.TabIndex = 81
+        Me.Label4.TabIndex = 87
         Me.Label4.Text = "TREATMENT ID:"
         '
         'Label3
@@ -403,10 +310,10 @@ Partial Class staff_transactions
         Me.Label3.BackColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(252, Byte), Integer))
         Me.Label3.Font = New System.Drawing.Font("Microsoft YaHei", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(133, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(194, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(12, 88)
+        Me.Label3.Location = New System.Drawing.Point(16, 104)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(178, 25)
-        Me.Label3.TabIndex = 80
+        Me.Label3.TabIndex = 86
         Me.Label3.Text = "TRANSACTION ID:"
         '
         'Label2
@@ -415,19 +322,19 @@ Partial Class staff_transactions
         Me.Label2.BackColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(252, Byte), Integer))
         Me.Label2.Font = New System.Drawing.Font("Microsoft YaHei", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(133, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(194, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(35, 276)
+        Me.Label2.Location = New System.Drawing.Point(39, 292)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(155, 25)
-        Me.Label2.TabIndex = 79
+        Me.Label2.TabIndex = 85
         Me.Label2.Text = "AMOUNT PAID:"
         '
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(252, Byte), Integer))
-        Me.PictureBox1.Location = New System.Drawing.Point(52, 311)
+        Me.PictureBox1.Location = New System.Drawing.Point(49, 327)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(165, 134)
-        Me.PictureBox1.TabIndex = 78
+        Me.PictureBox1.TabIndex = 84
         Me.PictureBox1.TabStop = False
         '
         'Label1
@@ -436,43 +343,137 @@ Partial Class staff_transactions
         Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(252, Byte), Integer))
         Me.Label1.Font = New System.Drawing.Font("Microsoft YaHei", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(133, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(194, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(69, 120)
+        Me.Label1.Location = New System.Drawing.Point(73, 136)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(121, 25)
-        Me.Label1.TabIndex = 77
+        Me.Label1.TabIndex = 83
         Me.Label1.Text = "PATIENT ID:"
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(356, 82)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(420, 228)
+        Me.DataGridView1.TabIndex = 82
         '
         'tb1
         '
         Me.tb1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tb1.Location = New System.Drawing.Point(187, 82)
+        Me.tb1.Location = New System.Drawing.Point(191, 98)
         Me.tb1.Name = "tb1"
         Me.tb1.Size = New System.Drawing.Size(159, 29)
-        Me.tb1.TabIndex = 76
+        Me.tb1.TabIndex = 81
         '
-        'Button2
+        'btn2
         '
-        Me.Button2.BackColor = System.Drawing.Color.Transparent
-        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.ForeColor = System.Drawing.Color.Transparent
-        Me.Button2.Location = New System.Drawing.Point(876, 329)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(133, 35)
-        Me.Button2.TabIndex = 75
-        Me.Button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.btn2.BackColor = System.Drawing.Color.Transparent
+        Me.btn2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.btn2.FlatAppearance.BorderSize = 0
+        Me.btn2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.btn2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.btn2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btn2.ForeColor = System.Drawing.Color.Transparent
+        Me.btn2.Location = New System.Drawing.Point(729, 28)
+        Me.btn2.Name = "btn2"
+        Me.btn2.Size = New System.Drawing.Size(47, 48)
+        Me.btn2.TabIndex = 80
+        Me.btn2.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btn2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.btn2.UseVisualStyleBackColor = False
         '
-        'staff_transactions
+        'del
+        '
+        Me.del.BackColor = System.Drawing.Color.Transparent
+        Me.del.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.del.FlatAppearance.BorderSize = 0
+        Me.del.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.del.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.del.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.del.ForeColor = System.Drawing.Color.Transparent
+        Me.del.Location = New System.Drawing.Point(600, 424)
+        Me.del.Name = "del"
+        Me.del.Size = New System.Drawing.Size(133, 35)
+        Me.del.TabIndex = 79
+        Me.del.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.del.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.del.UseVisualStyleBackColor = False
+        '
+        'upd
+        '
+        Me.upd.BackColor = System.Drawing.Color.Transparent
+        Me.upd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.upd.FlatAppearance.BorderSize = 0
+        Me.upd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.upd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.upd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.upd.ForeColor = System.Drawing.Color.Transparent
+        Me.upd.Location = New System.Drawing.Point(599, 378)
+        Me.upd.Name = "upd"
+        Me.upd.Size = New System.Drawing.Size(133, 35)
+        Me.upd.TabIndex = 78
+        Me.upd.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.upd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.upd.UseVisualStyleBackColor = False
+        '
+        'S_pID
+        '
+        Me.S_pID.BackColor = System.Drawing.Color.Transparent
+        Me.S_pID.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.S_pID.FlatAppearance.BorderSize = 0
+        Me.S_pID.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.S_pID.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.S_pID.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.S_pID.ForeColor = System.Drawing.Color.Transparent
+        Me.S_pID.Location = New System.Drawing.Point(445, 423)
+        Me.S_pID.Name = "S_pID"
+        Me.S_pID.Size = New System.Drawing.Size(133, 35)
+        Me.S_pID.TabIndex = 77
+        Me.S_pID.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.S_pID.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.S_pID.UseVisualStyleBackColor = False
+        '
+        'ins
+        '
+        Me.ins.BackColor = System.Drawing.Color.Transparent
+        Me.ins.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.ins.FlatAppearance.BorderSize = 0
+        Me.ins.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.ins.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.ins.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ins.ForeColor = System.Drawing.Color.Transparent
+        Me.ins.Location = New System.Drawing.Point(445, 376)
+        Me.ins.Name = "ins"
+        Me.ins.Size = New System.Drawing.Size(133, 35)
+        Me.ins.TabIndex = 76
+        Me.ins.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.ins.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.ins.UseVisualStyleBackColor = False
+        '
+        'S_tID
+        '
+        Me.S_tID.BackColor = System.Drawing.Color.Transparent
+        Me.S_tID.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.S_tID.FlatAppearance.BorderSize = 0
+        Me.S_tID.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.S_tID.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.S_tID.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.S_tID.ForeColor = System.Drawing.Color.Transparent
+        Me.S_tID.Location = New System.Drawing.Point(522, 328)
+        Me.S_tID.Name = "S_tID"
+        Me.S_tID.Size = New System.Drawing.Size(133, 35)
+        Me.S_tID.TabIndex = 75
+        Me.S_tID.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.S_tID.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.S_tID.UseVisualStyleBackColor = False
+        '
+        'dentist_transactions
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.db_final_opiz_acuesta.My.Resources.Resources.STAFF_TRANSACTION
-        Me.ClientSize = New System.Drawing.Size(814, 490)
+        Me.BackgroundImage = Global.db_final_opiz_acuesta.My.Resources.Resources.DENTIST_TRANSACTIONS
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ClientSize = New System.Drawing.Size(815, 488)
         Me.Controls.Add(Me.gb1)
         Me.Controls.Add(Me.tb8)
         Me.Controls.Add(Me.Label8)
@@ -490,30 +491,26 @@ Partial Class staff_transactions
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.tb1)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.btn2)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.s_tID)
-        Me.Name = "staff_transactions"
-        Me.Text = "staff_transactions"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Controls.Add(Me.tb1)
+        Me.Controls.Add(Me.btn2)
+        Me.Controls.Add(Me.del)
+        Me.Controls.Add(Me.upd)
+        Me.Controls.Add(Me.S_pID)
+        Me.Controls.Add(Me.ins)
+        Me.Controls.Add(Me.S_tID)
+        Me.DoubleBuffered = True
+        Me.Name = "dentist_transactions"
+        Me.Text = "dentist_transactions"
         Me.gb1.ResumeLayout(False)
         Me.gb1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents s_tID As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button5 As Button
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents btn2 As Button
-    Friend WithEvents Button1 As Button
+
     Friend WithEvents gb1 As GroupBox
     Friend WithEvents rb_4to5 As RadioButton
     Friend WithEvents rb_3to4 As RadioButton
@@ -540,6 +537,12 @@ Partial Class staff_transactions
     Friend WithEvents Label2 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents tb1 As TextBox
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btn2 As Button
+    Friend WithEvents del As Button
+    Friend WithEvents upd As Button
+    Friend WithEvents S_pID As Button
+    Friend WithEvents ins As Button
+    Friend WithEvents S_tID As Button
 End Class
